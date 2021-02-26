@@ -1,4 +1,4 @@
-package com.web.cakefactory;
+package com.cakefactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CakeFactoryApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CakeFactoryApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(CakeFactoryApplication.class, args);
+	}
 
 }
