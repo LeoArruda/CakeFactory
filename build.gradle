@@ -1,6 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.5.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'org.springframework.boot' version '2.4.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
@@ -8,9 +8,9 @@ group = 'com.cakefactory'
 sourceCompatibility = '15'
 
 configurations {
-  compileOnly {
-    extendsFrom annotationProcessor
-  }
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
 }
 
 repositories {
@@ -34,12 +34,20 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.flywaydb:flyway-core'
 
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	runtimeOnly 'org.postgresql:postgresql'
 
+	compile 'net.sourceforge.htmlunit:htmlunit'
+	compile 'org.springframework.security:spring-security-test'
+	//testCompile 'net.sourceforge.htmlunit:htmlunit'
+
 	testImplementation 'net.sourceforge.htmlunit:htmlunit'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
